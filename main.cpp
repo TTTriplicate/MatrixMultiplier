@@ -6,7 +6,9 @@
 
 using namespace std;
 
-/*int LineTotals(vector <vector <int> > &row, vector <vector <int> > &col, unsigned i, unsigned j){
+/* moved to seperate file for testing
+
+int LineTotals(vector <vector <int> > &row, vector <vector <int> > &col, unsigned i, unsigned j){
 	int total=0;
 	for(vector<int>::size_type k = 0; k < row.at(i).size(); ++k){//cycles across row of first and down column of second matrix
 		total += row.at(i).at(k) * col.at(k).at(j);	//building the total for a given position of the resulting matrix
@@ -30,20 +32,9 @@ int main() {
    dimensions >> l1 >> c1 >> l2 >> c2;
    if(l1 != c2){
 	   cerr << "These matricies cannot be multiplied." << endl;	//check matrix compatability
-	   goto label1;												//try again on line 22 if incompatible
+	   goto label1;						//try again on line 22 if incompatible
    }
    
- /*  cin.clear();
-   getline(cin, matrixData1);
-   cin.clear();
-   getline (cin, matrixData2);
-   
-   istringstream fill1;
-   istringstream fill2;
-   
-   fill1.str(matrixData1);
-   fill2.str(matrixData2);*/
-
    matrix1.resize(l1);
    matrix2.resize(l2);   
    for(i = 0; i < matrix1.size(); ++i){//build and fill first matrix
